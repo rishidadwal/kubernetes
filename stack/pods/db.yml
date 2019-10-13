@@ -38,6 +38,11 @@ spec:
           secretKeyRef:
             name: db-root-cred
             key: MYSQL_ROOT_PASSWORD
+    volumeMounts:
+      - mountPath: "/var/lib/mysql"
+        name: mariadb-disk
+
+        
     resources:
       requests:
         memory: "64Mi"
@@ -48,7 +53,7 @@ spec:
     ports:
       - containerPort: 3306
     
-    volumes:
+  volumes:
     - name: mariadb-disk
       persistentVolumeClaim:
         claimName: mariadb-disk
