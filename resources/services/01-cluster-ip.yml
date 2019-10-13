@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: 01-web
+  name: web
   labels:
     name: web
   containers:
