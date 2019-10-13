@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: web
+  name: webserver
   labels:
     name: web
 spec:
