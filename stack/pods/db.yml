@@ -8,7 +8,20 @@ data:
   MYSQL_ROOT_PASSWORD: cm9vdA==
 
 ---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mariadb-disk
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 8Gi
+  storageClassName: slow
 
+---
 apiVersion: v1
 kind: Pod
 metadata:
