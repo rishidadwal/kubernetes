@@ -8,8 +8,7 @@ spec:
   containers:
   - name: webserver 
     image: httpd
-   
-    resources:
+       resources:
       requests:
           memory: "64Mi"
           cpu: "250m"
