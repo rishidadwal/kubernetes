@@ -20,7 +20,10 @@ spec:
     image: mariadb
     env:
       - name: MYSQL_ROOT_PASSWORD
-          value: root
+          valueFrom:
+          secretKeyRef:
+            name: db-root-cred
+            key: MYSQL_ROOT_PASSWORD
     resources:
       requests:
         memory: "64Mi"
