@@ -18,7 +18,7 @@ spec:
         memory: "128Mi"
         cpu: "700m"
     ports:
-      - containerPort: 80
+      - containerPort: 8080
     env:
       - name: APP_SERVER
         value: stack-tomcat-int
