@@ -56,3 +56,15 @@ spec:
     - name: mariadb-disk
       persistentVolumeClaim:
         claimName: mariadb-disk
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: stack-db-int
+spec:
+   selector:
+    name: db
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
