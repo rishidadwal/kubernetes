@@ -17,3 +17,12 @@ metadata:
       containers:
       - name: httpd
         image: httpd
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "500m"
+          limits:
+            memory: "128Mi"
+            cpu: "700m"
+    ports:
+      - containerPort: 80
