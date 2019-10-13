@@ -23,12 +23,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: stack-httpd-ext
+  name: stack-tomcat-init
 spec:
-  type: LoadBalancer
-  selector:
-    name: httpd
+   selector:
+    name: tomcat
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8080
+      targetPort: 8080
