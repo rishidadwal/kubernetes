@@ -22,9 +22,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: webserver-service-ext
+  name: web-service-ext
 spec:
-  type: Loadbalancer
+  type: LoadBalancer
   selector:
     name: web1
   ports:
