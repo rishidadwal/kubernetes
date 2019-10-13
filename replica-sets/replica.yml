@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: httpd-rs
+  labels:
+    app: httpd
+    spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    app: httpd
+  template:
+    metadata:
+      labels:
+       app: httpd
+    spec:
+      containers:
+      - name: php-redis
+        image: gcr.io/google_samples/gb-frontend:v3
