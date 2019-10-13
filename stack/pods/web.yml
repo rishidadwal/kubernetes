@@ -19,6 +19,9 @@ spec:
         cpu: "700m"
     ports:
       - containerPort: 80
+    env:
+      - name: APP_SERVER
+        value: stack-tomcat-int
 ---
 apiVersion: v1
 kind: Service
