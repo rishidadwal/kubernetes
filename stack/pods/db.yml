@@ -8,6 +8,7 @@ data:
   MYSQL_ROOT_PASSWORD: cm9vdA==
 
 ---
+
 apiVersion: v1
 kind: Pod
 metadata:
