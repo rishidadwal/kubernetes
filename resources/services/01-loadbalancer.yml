@@ -2,11 +2,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: 02-webserver
+  name: web
   labels:
-    name: web1
+    name: web
+spec:
   containers:
-  - name: webserver 
+  - name: web
     image: httpd
     resources:
       requests:
@@ -25,8 +26,9 @@ metadata:
 spec:
   type: Loadbalancer
   selector:
-    name: web1
+    name: web
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
+
