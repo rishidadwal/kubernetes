@@ -19,7 +19,16 @@ spec:
         cpu: "700m"
     ports:
       - containerPort: 8080
-    env:
-      - name: APP_SERVER
-        value: stack-tomcat-int
----
+  ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: stack-httpd-ext
+spec:
+  type: LoadBalancer
+  selector:
+    name: httpd
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
