@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: webserver 
-    image: rkalluru/b39-stack-httpd
+    image: rkalluru/b39-stack-httpd:v3
 
     resources:
       requests:
