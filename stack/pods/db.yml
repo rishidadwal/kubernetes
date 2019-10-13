@@ -47,3 +47,8 @@ spec:
         cpu: "700m"
     ports:
       - containerPort: 3306
+    
+    volumes:
+    - name: mariadb-disk
+      persistentVolumeClaim:
+        claimName: mariadb-disk
