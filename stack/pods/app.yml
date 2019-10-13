@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: stack-tomcat-init
+  name: stack-tomcat-int
 spec:
    selector:
     name: tomcat
