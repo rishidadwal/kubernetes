@@ -1,0 +1,25 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: stack-httpd
+  labels:
+    app: httpd
+spec:
+  containers:
+  - name: webserver 
+    image: rkalluru/b39-stack-tomcat:v1
+
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "500m"
+      limits:
+        memory: "128Mi"
+        cpu: "700m"
+    ports:
+      - containerPort: 80
+    env:
+      - name: APP_SERVER
+        value: stack-tomcat-int
+---
