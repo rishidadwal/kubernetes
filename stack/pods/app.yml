@@ -2,12 +2,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: stack-httpd
+  name: stack-tomcat
   labels:
-    app: httpd
+    app: tomcat
 spec:
   containers:
-  - name: webserver 
+  - name: tomcat 
     image: rkalluru/b39-stack-tomcat:v1
 
     resources:
