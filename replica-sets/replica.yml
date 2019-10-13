@@ -12,6 +12,7 @@ metadata:
   template:
     metadata:
       labels:
+      matchLabels:
        app: httpd
     spec:
       containers:
