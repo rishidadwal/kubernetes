@@ -9,6 +9,9 @@ spec:
   containers:
   - name: tomcat 
     image: mariadb
+    env:
+      - name: MYSQL_ROOT_PASSWORD
+          value: root
     resources:
       requests:
         memory: "64Mi"
