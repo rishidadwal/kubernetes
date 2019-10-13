@@ -4,8 +4,7 @@ kind: Pod
 metadata:
   name: 02-webserver
   labels:
-    app: weberver
-spec:
+    app: web
   containers:
   - name: webserver 
     image: httpd
