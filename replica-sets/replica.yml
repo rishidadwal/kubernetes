@@ -4,16 +4,15 @@ metadata:
   name: httpd-rs
   labels:
     app: httpd
-    spec:
-  # modify replicas according to your case
-  replicas: 3
+spec:
+   replicas: 2
   selector:
-    app: httpd
+    matchLabels:
+      app: httpd
   template:
     metadata:
       labels:
-      matchLabels:
-       app: httpd
+        app: httpd
     spec:
       containers:
       - name: httpd
