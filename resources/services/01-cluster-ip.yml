@@ -1,0 +1,21 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: 02-webserver
+  labels:
+    app: weberver
+spec:
+  containers:
+  - name: webserver 
+    image: httpd
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "500m"
+      limits:
+        memory: "128Mi"
+        cpu: "700m"
+    ports:
+      - containerPort: 80
+---
