@@ -41,8 +41,7 @@ spec:
     volumeMounts:
       - mountPath: "/var/lib/mysql"
         name: mariadb-disk
-
-        
+     
     resources:
       requests:
         memory: "64Mi"
