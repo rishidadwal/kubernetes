@@ -25,9 +25,10 @@ kind: Service
 metadata:
   name: stack-tomcat-int
 spec:
+   type: LoadBalancer
    selector:
-    name: tomcat
-  ports:
+     name: tomcat
+   ports:
     - protocol: TCP
       port: 8080
       targetPort: 8080
